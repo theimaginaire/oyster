@@ -1,0 +1,55 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #000;
+
+// colors
+
+$color-1: #babdba; // Oyster
+$color-2: #1784c7; // Denim
+$color-3: #3c3e44; // White
+$color-4: #3c3e44; // Dark Grey
+
+
+// fonts 
+
+$primary-font: 'Muli', sans-serif;
+
+// header size
+
+$header-height-S: 45px;
+$header-height-M: 55px;
+
+//sidebar size
+
+$sidebar-width-M: 350px;
+$sidebar-width-L: 350px;
+
+// Transitions 
+
+$main-trans: all ease-in-out 0.4s;
+
+// breakpoints
+   
+$S:     600px;   
+$M:     768px;     
+$L:     1170px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (max-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}

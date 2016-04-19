@@ -1,0 +1,20 @@
+#slb_viewer_wrap .slb_theme_slb_black .slb_container {
+	padding: 0 !important;
+	.slb_data_content {
+		background-color: $color-1;
+		padding: 20px;
+		color: #000;
+	}
+	.slb_data_title {
+		font-family: $primary-font !important;
+		color: #000;
+	}
+	.slb_group_status {
+		float: right;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		font-family: $primary-font !important;
+		font-style: normal;
+		color: #555;
+	}
+}

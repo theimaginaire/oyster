@@ -1,0 +1,155 @@
+/*-------------------------------
+# Global
+--------------------------------*/
+.page-header {
+	margin: 20px 0;
+	@include MQ(S){
+		margin: 80px 0;
+	}
+	h1 {
+		margin-top: 0;
+		text-transform: lowercase;
+	}
+}
+
+/*------------------------------
+# Front Page
+------------------------------*/
+
+.blocks {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	@include MQ(S){
+		overflow: visible;
+		z-index: 100;
+	}
+	padding: 20px 0;
+	.column {
+		width: 32%;
+		&:not(last-child){
+			margin-right: 15px;
+		}
+	}
+	.col-md-4 {
+		height: 100%;
+		@include MQ(S){
+			height: 30% !important;
+		}
+
+	}
+	.half-block, .full-block, .one-third, .two-thirds {
+		position: relative;
+		display: block;
+		float: left;
+		width: 100%;
+
+		@include MQ(S){
+			height: 500px !important;
+		}
+		&:hover {
+			opacity: 0.2;
+			transition: all ease-in-out 0.6s;
+		}
+	}
+	.half-block {
+		background-color: #fff;
+		margin-bottom: 30px;
+		@include MQ(S){
+			margin-bottom: 0;
+		}
+		height: 48.75%;
+		&:nth-child(1){
+			animation-delay: 0.3s;
+		}
+		&:nth-child(2){
+			animation-delay: 0.6s;
+		}
+	}
+	.full-block {
+		background-color: #f4f5f6;
+		height: 100%;
+		animation-delay: 0s;
+	}
+	.content-block {
+		height: 100%;
+		@include MQ(S){
+			display: none;
+		}
+		animation-delay: 0s;
+		padding: 0;
+		h1 {
+			margin: 0;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			text-transform: uppercase;
+			letter-spacing: 0.6rem;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #000;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 1.6rem;
+			font-weight: 300;
+		}
+	}
+	.one-third {
+		background-color: #eee;
+		height: 33%;
+		margin-bottom: 30px;
+		animation-delay: 0.9s;
+		@include MQ(S){
+			margin-bottom: 0;
+		}
+	}
+	.two-thirds {
+		height: 64.5%;
+		background-color: #000;
+		animation-delay: 0.9s;
+	}
+	.block-text {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		padding: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.6rem;
+		color: #000;
+		background-color: #fff;
+	}
+}
+.category-content {
+	padding: 60px 0;
+}
+
+/*---------------------------
+# Portfolio Item 
+-----------------------------*/
+/* fluid 5 columns */
+.grid {
+	margin-top: 20px;
+	height:100% !important;
+}
+.grid-sizer,
+.grid-item { 
+	float:left;
+	width: 48%;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	@include MQ(S){
+		width: 100%;
+	}
+	z-index: 20; }
+/* 2 columns wide */
+.grid-item--width2 { float: left; width: 48%; }
+.content-item {
+	float: left;
+	width: 50%;
+	@include MQ(S){
+		width: 100%;
+		padding: 0;
+	}
+	padding: 40px;
+}

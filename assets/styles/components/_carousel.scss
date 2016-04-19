@@ -1,0 +1,84 @@
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes zoom {
+    from {transform: scale(1);}
+    to {transform: scale(1.15);}
+} 
+
+/* Standard syntax */ 
+@keyframes zoom {
+    from {transform: scale(1);}
+    to {transform: scale(1.15);}
+}
+.owl-carousel {
+	position: relative;
+	height: 96%;
+	width:100% !important;
+	margin: 0 auto;
+	margin-top: 20px;
+	.owl-stage-outer, .owl-stage {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+	.owl-item {
+		float: left;
+		height: 100%;
+		overflow: hidden;
+
+		@include MQ(S){
+			overflow: visible;
+		}
+		.item {
+			float: left;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			overflow: hidden;
+			opacity: 1;
+			@incude MQ(S){
+				width: 100%;
+			}
+			&:hover{
+				animation: zoom 4s none;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+
+		}
+		.text-item {
+			padding: 60px;
+			width: 500px;
+			height: 100%;
+			@include MQ(S){
+				padding: 10px;
+				max-width: 100% !important;
+			}
+		}
+	}
+	.owl-nav {
+		position: absolute;
+		@include center(y);
+		width: 100%;
+		.owl-prev, .owl-next {
+			color: #000;
+			height: 50px;
+			width: 50px;
+			font-size: 3rem;
+			background-image: url('../images/white.png');
+			background-repeat: repeat;
+			.fa {
+				position: relative;
+				@include center(xy);
+				top: 35%;
+			}
+		}
+		.owl-prev {
+			position: absolute;
+			left: 20px;
+		}
+		.owl-next {
+			position: absolute;
+			right: 20px !important;
+		}
+	}
+}

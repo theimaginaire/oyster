@@ -1,0 +1,16 @@
+.nav-menu {
+	margin-top: 120px;
+	@include MQ(S){
+		margin-top: 0;
+	}
+	list-style: none;
+	padding: 0;
+	a {
+		padding: 15px 15px 0 20px;
+	}
+	a:hover {
+		text-decoration: none;
+		color: lighten($color-3, 20%);
+		transition: $main-trans;
+	}
+}
