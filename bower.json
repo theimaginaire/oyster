@@ -12,10 +12,22 @@
     "bourbon": "~4.2.6",
     "font-awesome": "~4.5.0",
     "animate.css": "~3.5.1",
-    "jquery-mousewheel": "~3.1.13"
+    "jquery-mousewheel": "~3.1.13",
+    "packery": "~2.0.0",
+    "imagesloaded": "~4.1.0"
   },
   "overrides": {
-    
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
+    "packery": {
+      "main": [
+        "./dist/packery.pkgd.min.js"
+      ]
+    },
     "bootstrap-sass": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",

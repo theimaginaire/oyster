@@ -11,6 +11,23 @@
 		text-transform: lowercase;
 	}
 }
+/*------------------------------
+# About Page
+------------------------------*/
+.about-us {
+	height: 50%;
+	margin-top: 20px;
+	h1, h2 {
+		margin-top: 0;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		letter-spacing: 0.6rem;
+	}
+}
+.about-carousel {
+	display: block;
+	height: 47%;
+}
 
 /*------------------------------
 # Front Page
@@ -134,16 +151,13 @@
 }
 .grid-sizer,
 .grid-item { 
-	float:left;
+	display: block;
 	width: 48%;
-	margin-right: 30px;
-	margin-bottom: 30px;
 	@include MQ(S){
 		width: 100%;
-	}
-	z-index: 20; }
+	} }
 /* 2 columns wide */
-.grid-item--width2 { float: left; width: 48%; }
+.grid-item--width2 {  width: 48%; }
 .content-item {
 	float: left;
 	width: 50%;

@@ -32,7 +32,7 @@
                 ?>
                     <div class="grid-item <?php echo $class; ?>">                   
                             <?php
-                            $content = '<a href="'. $image['sizes']['large'] .'">';
+                            $content = '<a href="'. $image['sizes']['large'] .'" target="_blank">';
                             $content .= '<img src="'. $image['sizes']['large'] .'" class="img-responsive" />';
                             $content .= '</a>';
                         if ( function_exists('slb_activate') ){

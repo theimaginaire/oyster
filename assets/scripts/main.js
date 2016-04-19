@@ -19,6 +19,46 @@
     'common': {
       init: function() {
         $(document).ready(function(){
+          $(".owl-carousel").owlCarousel();
+        });
+        $('.owl-carousel').owlCarousel({
+            animateIn: 'fadeIn', 
+            margin:30,
+            loop:true,
+            autoWidth:true,
+            items:2,
+            nav:true,
+            navSpeed:3000,
+            navText: [
+            "<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>" 
+            ],
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:2
+                }
+            }
+        });
+        // init Packery
+        var $grid = $('.grid').packery({
+          gutter: 30
+        });
+        // layout Packery after each image loads
+        $grid.imagesLoaded().progress( function() {
+          $grid.packery();
+        });
+        $('.grid').packery({
+          // options
+          itemSelector: '.grid-item',
+          gutter: 30,
+          columnWidth: '.grid-sizer',
+        });
+        $(document).ready(function(){
           //cache DOM elements
           var mainContent = $('.cd-main-content'),
             header = $('.cd-main-header'),
@@ -150,32 +190,7 @@
         });
         
         
-        $(document).ready(function(){
-          $(".owl-carousel").owlCarousel();
-        });
-        $('.owl-carousel').owlCarousel({
-            animateIn: 'fadeIn', 
-            margin:30,
-            loop:true,
-            autoWidth:true,
-            items:2,
-            nav:true,
-            navSpeed:3000,
-            navText: [
-            "<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>" 
-            ],
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:2
-                },
-                1000:{
-                    items:2
-                }
-            }
-        });
+
 
       },
       finalize: function() {
